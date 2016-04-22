@@ -19,6 +19,9 @@
         <activity android:name=".StoryChoice">
 
         </activity>
+        <activity android:name=".FillStory">
+
+        </activity>
     </application>
 
 </manifest>
