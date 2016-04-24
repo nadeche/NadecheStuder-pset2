@@ -5,6 +5,6 @@ Nadeche Studer <nadeche.studer@gmail.com>
 	Silly fun for every one!
 
 ![Screenshot of app start](doc/Screenshot_start.png)
-![Screenshot of app list of storys](doc/Screenshot_list.png)
+![Screenshot of app list of story's](doc/Screenshot_list.png)
 ![Screenshot of app when words are asked](doc/Screenshot_askWords.png)
 ![Screenshot of app the created story](doc/Screenshot_story.png)
