@@ -11,39 +11,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/mad_libs_fill_instruction"
+        android:text="@string/story_presentation"
         android:textSize="20sp"
         android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/wordTypeTeV"
-        android:layout_marginTop="40dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="40dp">
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/wordFillEdT"
-            android:inputType="text" />
-
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ok"
-            android:onClick="onClickOkButton"/>
-    </LinearLayout>
+        android:id="@+id/titleTeV"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/wordsLeftTeV"
-        android:layout_marginTop="40dp" />
+        android:id="@+id/storyTeV"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go_again"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="end"
+        android:onClick="onClickNewStory"/>
 
 </LinearLayout>

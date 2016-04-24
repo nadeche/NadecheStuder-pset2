@@ -17,10 +17,12 @@
         </activity>
 
         <activity android:name=".StoryChoice">
-
         </activity>
-        <activity android:name=".FillStory">
 
+        <activity android:name=".FillStory">
+        </activity>
+
+        <activity android:name=".FinalStory">
         </activity>
     </application>
 

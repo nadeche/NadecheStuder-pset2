@@ -17,8 +17,11 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /*
- * Created by Nadeche Studer on 20-4-2016.
+ * Created by Nadeche Studer
+ *
+ * This activity asks the user to chose a mad lib story to create.
  */
+
 public class StoryChoice extends AppCompatActivity {
 
     @Override
@@ -26,7 +29,7 @@ public class StoryChoice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.story_choice);
 
-        //get all the file names in main/assets
+        //get all file names of mad lib story's available, form main/assets/mad_libs
         AssetManager assetManager = this.getAssets();
         String [] stories = new String[0];
         try {
@@ -35,15 +38,15 @@ public class StoryChoice extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        //remove file extension for each list item
+        //remove file extension for each mad lib story
         for (int i =0; i < stories.length; i++) {
             stories[i] = stories[i].replaceFirst(".txt", "");
         }
 
-        //randomize the order of the list
+        //randomize the order of the list of mad libs
         Collections.shuffle(Arrays.asList(stories));
 
-        //list adapter
+        //call to standard list adapter and standard layout form android(we don't need something fancy here)
         ListAdapter storyList = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, stories);
 
         //get the list view id to fill
@@ -57,20 +60,20 @@ public class StoryChoice extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                //get the selected story to a string
-                //String chosenStory = (String) parent.getItemAtPosition(position);
+                //store the selected story to a string
                 String chosenStory = ((TextView)view).getText().toString();
 
                 //display a short toast
                 Toast.makeText(StoryChoice.this,chosenStory, Toast.LENGTH_SHORT).show();
 
-                //create intent to go to next activity
-                Intent next = new Intent(getApplicationContext(),FillStory.class );
+                //create intent to go to fill story activity
+                Intent toFillStory = new Intent(getApplicationContext(),FillStory.class );
 
-                //bring chosen story to next activity
-                next.putExtra("story", chosenStory);
+                //bring chosen story title to next activity
+                toFillStory.putExtra("story", chosenStory);
+
                 //launch next activity
-                startActivity(next);
+                startActivity(toFillStory);
             }
         });
     }

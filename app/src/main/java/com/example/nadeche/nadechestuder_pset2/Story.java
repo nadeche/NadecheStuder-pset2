@@ -16,8 +16,10 @@
  * A Story is Serializable, so it can be packed into an Intent as "extra" data.
  */
 
-// !YOU MAY WANT TO CHANGE THE PACKAGE BELOW SO THAT IT MATCHES YOUR PROJECT'S PACKAGE!
+
 package com.example.nadeche.nadechestuder_pset2;
+
+import android.util.Log;
 
 import java.io.*;
 import java.util.*;
